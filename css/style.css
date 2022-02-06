@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --whitecolor: #fff;
+    --redcolor:#500707;
+    --gray:#868686;
+
+}
+
+body{
+    font-family: 'Dongle', sans-serif;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    
+}
+
+.clear{
+    clear:both;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Dongle', sans-serif;
+}
+
+button{
+    font-family: inherit;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);   
+}
+
+
+
+
+
+
+/************ Header Section **********/
+
+.header{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background: rgba(156, 156, 156, 0.2);
+}
+
+.header .logo{
+    width:30%;
+    float: left;
+}
+
+.header .logo img{
+    width: 30%;
+    margin-top: 10px;
+}
+.header .nav{
+    width:60%;
+    float:left;
+    margin-top: 15px;
+    text-align: right;
+    margin-left: 50px;
+}
+
+.header .nav li{
+    display: inline-block;
+    width: 100px;
+    text-align:center;
+    
+}
+
+.header .nav li>a {
+    color: var(--whitecolor);
+    font-size: 20px;
+    display: block;
+    padding: 25px 10px;
+       
+}
+
+.header .nav li>a:after
+{ 
+    content: "";
+    display: block;
+    width: 0;
+    height:3px;
+    background-color:var(--redcolor);
+    transition: width 0.5s;
+    margin-top: 2px;
+}
+
+
+.header .nav li >a:hover:after{
+    width:100%;
+}
+
+
+/********** Home Section ****************/
+
+.home{
+    height: 100vh;
+    background-image: url(../images/about-us.jpg);
+    background-size: cover;
+    position: relative;
+    
+}
+
+.home-content{
+ 
+    position: absolute;
+    width: 65%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+
+
+.home .title{
+    color: var(--whitecolor);
+    margin-top: 30px;
+    font-size: 60px; 
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.home-desc{
+    margin: 15px 0; 
+    color: var(--whitecolor);
+    font-size: 15px;
+    
+    line-height: 1.5;
+    margin-top: 10px;
+    text-transform: capitalize;
+     font-family: 'Zen Old Mincho', serif;;
+}
+
+.home .btn{
+    min-width:140px;
+    height: 50px;
+  
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    font-size: 24px;
+    text-transform:capitalize;
+    font-weight: 700;
+}
+    
+.home .btn-request{
+    margin-top: 50px;
+    margin-right: 20px;
+    background-color: var(--gray);
+    /*box-shadow: 0.01rem 0.02rem 1rem;*/
+    
+ }
+
+ .home .btn-request a{
+    color: var(--redcolor);
+ }
+
+ .home .btn-request:hover{
+     color: var(--redcolor);
+     background-color: var(--redcolor);
+    box-shadow: 0.01rem 0.02rem 1rem;
+
+ }
+ .home .btn-request:hover a{
+    color: var(--whitecolor);
+    letter-spacing: 1px;
+ }
+
+
+
+
+ /********* Form Section ***************/
+
+
+ .background{
+    background-image: url(../images/JOIN-US-photo-1.jpg);
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 750px;
+ }
+form{
+    position: relative;
+    height: 700px;
+    width: 750px;
+    background: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow:0 5px 15px rgba(0,0,0,.3) ;
+    border-top: 1px solid rgba(255,255,255,.3);
+    border-left: 1px solid rgba(255,255,255,.3);
+backdrop-filter:blur(10px);
+top: 50%;
+left: 50%;
+transform: translate(-50%,5%);
+
+}
+
+fieldset{
+    margin: 10px;
+    padding: 20px;
+}
+
+fieldset .title{
+    display: flex;
+    
+}
+
+fieldset .title h4{
+    padding-top: 8px;
+    padding-right: 3px;
+    color: var(--whitecolor);
+    font-size: 25px;
+    text-transform: capitalize;
+}
+
+fieldset img{
+    width: 50px;
+    height: 50px;
+}
+
+.form-table{
+    margin-top: 10px;
+    width: 600px;
+    table-layout: fixed;
+}
+
+.form-table td{
+  width: 220px;
+  height: 50px;
+}
+
+.form-table label{
+    color:var(--whitecolor);
+    font-size: 25px;
+    text-transform: capitalize;
+}
+
+.form-table i{
+    color: var(--whitecolor);
+}
+
+.form-table input,.form-table select{
+    padding: 5px;
+    text-transform: capitalize;
+    font-size: 15px;
+    color: var(--redcolor);
+    border: 2px solid var(--redcolor);
+    border-radius: 10px;
+}
+
+.form-table input[type="file"]{
+    border: none;
+}
+
+.submit{
+    margin-top: 40px;
+    margin-right: 20px;
+    width: 120px;
+    height: 40px;
+    color: var(--redcolor);
+    background-color: var(--redcolor);
+    font-size: 30px;
+    color: var(--whitecolor);
+    text-transform: uppercase;
+    float: right;
+}
+
+.submit:hover{
+    color: var(--redcolor);
+     background-color: var(--whitecolor);
+     font-weight: 800px;
+    box-shadow: 0.01rem 0.02rem 1rem;
+}
